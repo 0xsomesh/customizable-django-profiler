@@ -1,0 +1,8 @@
+setup.py
+Profiler/__init__.py
+Profiler/middleware.py
+cProfiler.egg-info/PKG-INFO
+cProfiler.egg-info/SOURCES.txt
+cProfiler.egg-info/dependency_links.txt
+cProfiler.egg-info/not-zip-safe
+cProfiler.egg-info/top_level.txt
