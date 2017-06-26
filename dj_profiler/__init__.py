@@ -1,1 +1,1 @@
-from middleware import cProfile
+from .middleware import cProfileMiddleware
