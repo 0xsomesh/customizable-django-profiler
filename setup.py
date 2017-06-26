@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-        name='django_profiler',
+        name='customizable_django_profiler',
         version='0.1',
         url='https://github.com/someshchaturvedi/django_profiler',
         description='Django middleware based on cProfile',
