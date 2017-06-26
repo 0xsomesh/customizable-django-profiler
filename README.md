@@ -15,14 +15,14 @@ $ pip install customizable-django-profiler
 ```
 
 ### Add
-Add ```customizable-django-profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
+Add ```customizable_django_profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
 
 ```bash
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     ....
-    'customizable-django-profiler.cProfileMiddleware',
+    'customizable_django_profiler.cProfileMiddleware',
 ]
 ```
 ### Enable
