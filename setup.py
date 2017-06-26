@@ -1,11 +1,14 @@
-from setuptools import setup
+from distutils.core import setup
 
-setup(name='cProfiler',
-      version='0.1',
-      url='',
-      description='Django middleware based on cProfile',
-      author='Somcha',
-      author_email='somesh.08.96@gmail.com',
-      license='MIT',
-      packages=['Profiler'],
-      zip_safe=False)
+setup(
+        name='dj_profiler',
+        version='0.1',
+        url='https://github.com/someshchaturvedi/dj_profiler.git',
+        description='Django middleware based on cProfile',
+        author='Somesh Chaturvedi',
+        author_email='somesh.08.96@gmail.com',
+        license='MIT',
+        packages=['dj_profiler'],
+        keywords = ['django','middleware','cProfile', 'Profile'],
+        zip_safe=False
+      )
