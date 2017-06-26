@@ -1,6 +1,6 @@
-# customizable-django-profiler (Customizable Django Profiler)
+# Customizable Django Profiler
 
-Customizable Django cProfile middleware
+Django cProfile middleware having configurable triggers and outputs
 
 ## Getting Started
 
