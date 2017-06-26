@@ -14,7 +14,7 @@ except:
     from io import StringIO
 
 
-class cProfile(object):
+class cProfileMiddleware(object):
     def __init__(self, get_response):
         self.get_response = get_response
 
