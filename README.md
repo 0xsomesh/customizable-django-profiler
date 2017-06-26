@@ -8,8 +8,6 @@ Follow given instructions to setup dj_profiler
 
 ### Install
 
-A step by step series of examples that tell you have to get a development env running
-
 Install via pip
 
 ```bash
