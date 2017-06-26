@@ -1,28 +1,28 @@
-# django_profiler (Django Profiler)
+# customizable-django-profiler (Customizable Django Profiler)
 
 Customizable Django cProfile middleware
 
 ## Getting Started
 
-Follow given instructions to setup django_profiler
+Follow given instructions to setup customizable-django-profiler
 
 ### Install
 
 Install via pip
 
 ```bash
-$ pip install django_profiler
+$ pip install customizable-django-profiler
 ```
 
 ### Add
-Add ```django_profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
+Add ```customizable-django-profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
 
 ```bash
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     ....
-    'django_profiler.cProfileMiddleware',
+    'customizable-django-profiler.cProfileMiddleware',
 ]
 ```
 ### Enable
@@ -51,7 +51,7 @@ Example
    ncalls  tottime  percall  cumtime  percall filename:lineno(function)
    ...      ...      ...       ...     ...           ...
    ...      ...      ...       ...     ...           ...
-   
+
    ```
 
 ## Customize
@@ -63,7 +63,7 @@ Default are
 ```bash
 PROFILER = {
     'activate': True,
-    'sort': 'time', 
+    'sort': 'time',
     'count': '100' ,
     'output': ['console'],             
     'file_location': 'profile.txt',
@@ -94,20 +94,20 @@ Specify the form of output. Multiple output formats can be selected. Default is 
 Some examples are
 
 ```bash
-'output': ['console'] 
+'output': ['console']
 ```
 ```bash
-'output': ['console', 'file', 'response'] 
+'output': ['console', 'file', 'response']
 ```
 ```bash
-'output': ['file', 'response'] 
+'output': ['file', 'response']
 ```
 
 ### file_location
 Specify the location of file you want to write in the results. **Only valid if ```'file'``` in ```'output'``` key**. Default value ```profile.txt```
 
 ### trigger
-Specify the trigger for API on which profiler runs. Default is ```'all'```. Instead you can trigger profiler by passing a query parameter, which can be specified after ```:``` in ```'trigger'``` key for example 
+Specify the trigger for API on which profiler runs. Default is ```'all'```. Instead you can trigger profiler by passing a query parameter, which can be specified after ```:``` in ```'trigger'``` key for example
 
 ```bash
 'trigger' : 'query_param:profile'
@@ -121,9 +121,8 @@ http://localhost:8000/api/?profile
 
 ## Author
 
-* **Somesh Chaturvedi** 
+* **Somesh Chaturvedi**
 
 ## License
 
 This project is licensed under the [MIT](LICENSE.md).
-
