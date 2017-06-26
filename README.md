@@ -56,7 +56,7 @@ Example
 
 ## Customize
 
-You can customize the Profiler settings via adding some varaibles in ```Profile``` key in ```settings.py```
+You can customize the Profiler settings via adding some varaibles in ```Profiler``` key in ```settings.py```
 
 Default are
 
@@ -70,7 +70,7 @@ PROFILER = {
     'trigger': 'all'
 }
 ```
-Description of variables
+Description of cutomizable keys
 ### activate
 Set this key to ```True``` to enable Profiler
 
