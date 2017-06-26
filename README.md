@@ -1,10 +1,10 @@
-# dj_profiler (Django Profiler)
+# django_profiler (Django Profiler)
 
 Customizable Django cProfile middleware
 
 ## Getting Started
 
-Follow given instructions to setup dj_profiler
+Follow given instructions to setup django_profiler
 
 ### Install
 
@@ -15,14 +15,14 @@ $ pip install dj_profiler
 ```
 
 ### Add
-Add ```dj_profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
+Add ```django_profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
 
 ```
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     ....
-    'dj_profiler.cProfileMiddleware',
+    'django_profiler.cProfileMiddleware',
 ]
 ```
 ### Enable
