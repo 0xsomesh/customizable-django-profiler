@@ -50,6 +50,6 @@ class cProfile(object):
 
     def process_view(self, request, callback, callback_args, callback_kwargs):
         if self.can(request):
-            self.profiler = cProfile.Profile()
+            self.profiler = Profile()
             args = (request,) + callback_args
             return self.profiler.runcall(callback, *args, **callback_kwargs)
