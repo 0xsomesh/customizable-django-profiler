@@ -11,5 +11,5 @@ setup(
         packages=['customizable_django_profiler'],
         keywords = ['django','middleware','cProfile', 'Profile'],
         zip_safe=False,
-        download_url = 'https://github.com/someshchaturvedi/customizable-django-profiler/archive/0.1.tar.gz'
+        download_url = 'https://github.com/someshchaturvedi/customizable-django-profiler/archive/0.2.tar.gz'
       )
