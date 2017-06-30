@@ -2,6 +2,10 @@
 
 Django cProfile middleware having configurable triggers and outputs
 
+## Requirements
+
+Django-1.10 or above
+
 ## Getting Started
 
 Follow given instructions to setup customizable-django-profiler
