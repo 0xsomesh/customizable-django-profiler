@@ -4,7 +4,7 @@ Django cProfile middleware having configurable triggers and outputs
 
 ## Requirements
 
-Django-1.10 or above
+Django-1.10 or above (For below version 1.10 refer this [package](https://github.com/lavi06/django-profile-middleware))
 
 ## Getting Started
 
