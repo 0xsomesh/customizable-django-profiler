@@ -28,14 +28,14 @@ class cProfileMiddleware(object):
             out = StringIO()
             stats = pstats.Stats(self.profiler, stream=out)
             stats.sort_stats(settings.PROFILER.get('sort', 'time'))
-            stats.print_stats(int(settings.PROFILER.get('count', 50)))
+            stats.print_stats(int(settings.PROFILER.get('count', 100)))
             result = out.getvalue()
             for output in settings.PROFILER.get('output', ['console']):
                 if output == 'console':
                     print(result)
                 if output == 'file':
-                    file_location = \
-                        settings.PROFILER.get('file_location', 'prof.txt')
+                    file_location = settings.PROFILER.get(
+                        'file_location', 'profile.txt')
                     print(file_location)
                     with open(file_location, "a+") as f:
                         f.write(result)
