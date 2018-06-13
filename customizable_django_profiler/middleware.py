@@ -45,9 +45,9 @@ class cProfileMiddleware(object):
         return response
 
     def can(self, request):
-        if settings.DEBUG and settings.PROFILER['activate']:
+        if settings.PROFILER['activate']:
             if settings.PROFILER.get('trigger', 'all') == 'all':
                 return True
-            elif settings.PROFILER['trigger'].split(':')[1] in request.GET:
+            elif settings.PROFILER['trigger'].split(':')[1] in str(request):
                 return True
             return False
