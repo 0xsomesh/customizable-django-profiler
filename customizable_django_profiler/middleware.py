@@ -17,10 +17,10 @@ except:
 class cProfileMiddleware(object):
     def __init__(self, get_response):
         self.get_response = get_response
-        self.profiler = profile.Profile()
 
     def __call__(self, request):
         if self.can(request):
+            self.profiler = profile.Profile()
             self.profiler.enable()
         response = self.get_response(request)
         if self.can(request):
