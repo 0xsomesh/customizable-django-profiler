@@ -1,5 +1,5 @@
 import pstats
-
+from datetime import datetime
 from django.conf import settings
 from django.http import HttpResponse
 
@@ -24,6 +24,13 @@ class cProfileMiddleware(object):
             self.profiler.enable()
         response = self.get_response(request)
         if self.can(request):
+            if 'dump' in  settings.PROFILER.get('output', ['console']):
+                file_location = settings.PROFILER.get('file_location', 'profile')
+                file_name =  '{file_location}{timestamp::%Y%m%d%H%M%S%f}.prof'.format(
+                    file_location=file_location,
+                    timestamp=datetime.now())
+                self.profiler.dump_stats(file_name)
+
             self.profiler.create_stats()
             out = StringIO()
             stats = pstats.Stats(self.profiler, stream=out)
