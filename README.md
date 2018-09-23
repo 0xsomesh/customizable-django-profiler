@@ -19,7 +19,7 @@ $ pip install customizable-django-profiler
 ```
 
 ### Add
-Add ```customizable_django_profiler.cProfileMiddleware``` to the end of ```MIDDLEWARE``` in project's ```settings.py```
+Add `customizable_django_profiler.cProfileMiddleware` to the end of `MIDDLEWARE` in project's `settings.py`
 
 ```bash
 MIDDLEWARE = [
@@ -30,8 +30,8 @@ MIDDLEWARE = [
 ]
 ```
 ### Enable
-Add ```PROFILER``` in project's ```settings.py``` and set ```activate = True```.
-Also make sure project running in DEBUG mode ```DEBUG = True```
+Add `PROFILER` in project's `settings.py` and set `activate = True`.
+Also make sure project running in DEBUG mode `DEBUG = True`
 
 ```bash
 DEBUG = True
@@ -60,7 +60,7 @@ Example
 
 ## Customize
 
-You can customize the Profiler settings via adding some varaibles in ```Profiler``` key in ```settings.py```
+You can customize the Profiler settings via adding some varaibles in `Profiler` key in `settings.py`
 
 Default are
 
@@ -76,25 +76,28 @@ PROFILER = {
 ```
 Description of cutomizable keys
 ### activate
-Set this key to ```True``` to enable Profiler
+Set this key to `True` to enable Profiler
 
 ```bash
 'activate': True
 ```
-To disable set to ```False```
+To disable set to `False`
 ```bash
 'activate': False
 ```
 
 ### sort
-Sort according to the set value. Default is ```'time'```.
+Sort according to the set value. Default is `'time'`.
 See [documentaion](http://docs.python.org/2/library/profile.html#pstats.Stats.sort_stats) for more options
 
 ### count
-Specify number of rows to output. Default is ```100```.
+Specify number of rows to output. Default is `100`.
 
 ### output
-Specify the form of output. Multiple output formats can be selected. Default is ```['console']```. Options are ```'file'``` and ```'response'```. ```'file'``` will write the file specified by ```'file_location'``` key and ```'response'``` will output the result as response of request.
+Specify the form of output. Multiple output formats can be selected. Default is `['console']`. Options are `'file'`, `dump` and `'response'`.  
+`'file'` and `dump` will write the file specified by `'file_location'` key and `'response'` will output the result as response of request.  
+`file` is used for a txt file.  
+`dump` will be used for binary dump.  
 Some examples are
 
 ```bash
@@ -108,16 +111,16 @@ Some examples are
 ```
 
 ### file_location
-Specify the location of file you want to write in the results. **Only valid if ```'file'``` in ```'output'``` key**. Default value ```profile.txt```
+Specify the location of file you want to write in the results. **Only valid if `'file'` in `'output'` key**. Default value `profile.txt`
 
 ### trigger
-Specify the trigger for API on which profiler runs. Default is ```'all'```. Instead you can trigger profiler by passing a query parameter, which can be specified after ```:``` in ```'trigger'``` key for example
+Specify the trigger for API on which profiler runs. Default is `'all'`. Instead you can trigger profiler by passing a query parameter, which can be specified after `:` in `'trigger'` key for example
 
 ```bash
 'trigger' : 'query_param:profile'
 ```
 
-Profiling will only be enabled for APIs with ```profile``` in their request parameters.
+Profiling will only be enabled for APIs with `profile` in their request parameters.
 
 ```bash
 http://localhost:8000/api/?profile

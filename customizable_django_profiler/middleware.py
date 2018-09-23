@@ -22,15 +22,10 @@ class cProfileMiddleware(object):
         if self.can(request):
             self.profiler = profile.Profile()
             self.profiler.enable()
-        response = self.get_response(request)
-        if self.can(request):
-            if 'dump' in settings.PROFILER.get('output', ['console']):
-                file_location = settings.PROFILER.get('file_location', 'profile')
-                file_name = '{file_location}{timestamp::%Y%m%d%H%M%S%f}.prof'.format(
-                    file_location=file_location,
-                    timestamp=datetime.now())
-                self.profiler.dump_stats(file_name)
 
+        response = self.get_response(request)
+
+        if self.can(request):
             self.profiler.create_stats()
             out = StringIO()
             stats = pstats.Stats(self.profiler, stream=out)
@@ -43,9 +38,15 @@ class cProfileMiddleware(object):
                 if output == 'file':
                     file_location = settings.PROFILER.get(
                         'file_location', 'profile.txt')
-                    print(file_location)
                     with open(file_location, "a+") as f:
                         f.write(result)
+                if output == 'dump':
+                    file_location = settings.PROFILER.get('file_location', 'profile')
+                    file_location = '{file_location}{timestamp::%Y%m%d%H%M%S%f}.prof'.format(
+                        file_location=file_location,
+                        timestamp=datetime.now())
+                    print(file_location)
+                    self.profiler.dump_stats(file_location)
                 if output == 'response':
                     response = HttpResponse(result,
                                             content_type='application/liquid')
