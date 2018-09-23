@@ -31,11 +31,8 @@ MIDDLEWARE = [
 ```
 ### Enable
 Add `PROFILER` in project's `settings.py` and set `activate = True`.
-Also make sure project running in DEBUG mode `DEBUG = True`
 
 ```bash
-DEBUG = True
-
 PROFILER = {
     'activate': True,
 }
