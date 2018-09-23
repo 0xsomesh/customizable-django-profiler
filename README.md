@@ -125,7 +125,11 @@ http://localhost:8000/api/?profile
 
 ## Author
 
-* **Somesh Chaturvedi**
+* [Somesh Chaturvedi](https://github.com/someshchaturvedi)
+
+## Contibutors
+
+* [José L. Redrejo Rodríguez](https://github.com/jredrejo)
 
 ## License
 
