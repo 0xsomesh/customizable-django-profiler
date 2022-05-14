@@ -1,4 +1,4 @@
-# Customizable Django Profiler
+# Customizable Django Profiler (Not Maintatined anymore)
 
 Django cProfile middleware having configurable triggers and outputs
 
